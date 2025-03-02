@@ -66,13 +66,16 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GA-TEB: Goal-Adaptive Framework for Efficient Navigation Based on Goal Lines</h1>
+          <h1 class="title is-1 publication-title">NavG: Risk-Aware Navigation in Crowded Environments Based on Reinforcement Learning with Guidance Points</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://qianyi-zhang.github.io/">Qianyi Zhang</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://www.huawei.com/en/">Wentao Luo</a><sup>2</sup>,</span>
-            <span class="author-block">
+              <span class="author-block">
+                <a href="https://logancome.github.io/">Boyi Liu</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
               <a href="https://www.huawei.com/en/">Ziyang Zhang</a><sup>2</sup>,
             </span>
             <span class="author-block">
@@ -85,7 +88,8 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Nankai University,</span>
-            <span class="author-block"><sup>2</sup>Huawei</span>
+            <span class="author-block"><sup>2</sup>Huawei,</span>
+            <span class="author-block"><sup>3</sup>Hong Kong University of Science and Technolog</span>
           </div>
 
           <div class="column has-text-centered">
@@ -240,13 +244,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In crowd navigation, the local goal plays a crucial role in trajectory initialization, optimization, and evaluation. Recognizing that when the global goal is distant, the robot's primary objective is avoiding collisions, making it less critical to pass through the exact local goal point, this work introduces the concept of <i>goal lines</i>, which extend the traditional local goal from a single point to multiple candidate lines. 
+            Motion planning in navigation systems is highly susceptible to upstream perceptual errors, particularly in human detection and tracking. To mitigate this issue, the concept of guidance points—a novel directional cue within a reinforcement learning-based framework—is introduced. A structured method for identifying guidance points is developed, consisting of obstacle boundary extraction, potential guidance point detection, and redundancy elimination. To integrate guidance points into the navigation pipeline, a perceptionto-planning mapping strategy is proposed, unifying guidance points with other perceptual inputs and enabling the RL agent to effectively leverage the complementary relationships among raw laser data, human detection and tracking, and guidance points. 
           </p>
           <p>
-            Coupled with a topological map construction strategy that groups obstacles to be as convex as possible, a goal-adaptive navigation framework is proposed to efficiently plan multiple candidate trajectories. 
-          </p>
-          <p>
-            Simulations and experiments demonstrate that the proposed GA-TEB framework effectively prevents deadlock situations, where the robot becomes frozen due to a lack of feasible trajectories in crowded environments. Additionally, the framework greatly increases planning frequency in scenarios with numerous non-convex obstacles, enhancing both robustness and safety.          
+            Qualitative and quantitative simulations demonstrate that the proposed approach achieves the highest success rate and near-optimal travel times, greatly improving both safety and efficiency. Furthermore, real-world experiments in dynamic corridors and lobbies validate the robot's ability to confidently navigate around obstacles and robustly avoid pedestrians.
           </p>
         </div>
       </div>
@@ -267,49 +268,6 @@
   </div>
 </section>
 
-
-
-  
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Previous version of this framework</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            The first version, <a href="https://ieeexplore.ieee.org/document/10210322">Graphic-TEB</a>, proposes a framework that groups obstacles with computer graphics.
-          </p>
-          <p>
-            The second version, <a href="https://github.com/Chris-Arvin/STC-TEB">STC-TEB</a>, adds incremental optimization to this framework. 
-          </p>
-          <p>
-            In parallel, another version, <a href="https://ieeexplore.ieee.org/document/10161222">CG3</a>, introduces the human gaze to make the robot keep safe distance with human beings adaptively. 
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
-
-
-<!-- <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
-  </div>
-</section> -->
 
 
 <footer class="footer">
